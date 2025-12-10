@@ -55,11 +55,13 @@
     .logo a {
       text-decoration: none;
       color: inherit; /* keeps same color as the h1 */
+      border: none;
     }
   
-    .logo a:hover {
-      text-decoration: none; /* prevents underline */
-      color: inherit;        /* prevents color change if theme changes link colors */
+    .logo a:hover,
+    .logo a:focus,
+    .logo a:active {
+      text-decoration: none;
     }
 
     .logo-subtitle {
