@@ -52,6 +52,11 @@
       text-shadow: 2px 2px 0 #000000;
     }
 
+    .logo a {
+      text-decoration: none;
+      color: inherit; /* keeps same color as the h1 */
+    }
+
     .logo-subtitle {
       font-size: 10px;
       text-transform: uppercase;
@@ -321,14 +326,16 @@
     <!-- HEADER / LOGO -->
     <header>
       <div class="logo-bar">
-        <div class="logo-box">CLOUDTOPHER.COM</div>
+        <div class="logo-box">
+          <a href="/index.html">CLOUDTOPHER.COM</a>
+        </div>
         <div class="logo-subtitle">
           The problems of today, in the future!
         </div>
       </div>
 
     <div class="tab-bar">
-      <div class="tab" onclick="window.location.href='/'">News</div>
+      <div class="tab" onclick="window.location.href='/'">Home</div>
       <div class="tab" onclick="window.location.href='/index.html#skills'">Skills</div>
       <div class="tab" onclick="window.location.href='/index.html#certs'">Certs</div>
       <div class="tab" onclick="window.location.href='/blog.html'">Blog</div>
