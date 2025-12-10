@@ -22,8 +22,8 @@ jobs:
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::134705967758:role/github-actions-cloudtopher-deploy
-          aws-region: us-east-1   # or your actual region
+            role-to-assume: ${{ vars.AWS_ROLE_ARN }}
+            aws-region: ${{ vars.AWS_REGION }}
 
 
       - name: Sync files to S3
