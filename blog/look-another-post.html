@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chris Roethel – Cloud Resume Blog</title>
+  <style>
+    /* ===== GLOBAL ===== */
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000000;
+      color: #ffffff;
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+      font-size: 12px;
+    }
+
+    a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    #page-wrapper {
+      width: 760px;
+      margin: 0 auto;
+      padding: 10px 0 40px;
+    }
+
+    /* ===== HEADER / LOGO BAR ===== */
+    .logo-bar {
+      background: #111111;
+      border: 2px solid #666666;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 5px;
+    }
+
+    .logo-box {
+      background: #000000;
+      border: 2px solid #ffcc00;
+      padding: 5px 10px;
+      text-transform: uppercase;
+      color: #ffcc00;
+      font-size: 22px;
+      letter-spacing: 2px;
+      font-weight: bold;
+      text-shadow: 2px 2px 0 #000000;
+    }
+
+    .logo-subtitle {
+      font-size: 10px;
+      text-transform: uppercase;
+      color: #cccccc;
+    }
+
+    /* ===== TOP NAV TABS ===== */
+    .tab-bar {
+      background: #222222;
+      border: 2px solid #666666;
+      border-top: none;
+      padding: 3px 5px;
+      display: flex;
+      gap: 4px;
+      margin-bottom: 10px;
+    }
+
+    .tab {
+      background: #333333;
+      padding: 3px 8px;
+      border: 1px solid #999999;
+      font-size: 10px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .tab.active {
+      background: #ffcc00;
+      color: #000000;
+      border-color: #000000;
+    }
+
+    .tab:hover {
+      background: #ffcc00;
+      color: #000000;
+    }
+
+    /* ===== MAIN GRID ===== */
+    .main-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    /* RIGHT SIDEBAR */
+    .sidebar {
+      flex: 1;
+      background: #111111;
+      border: 2px solid #666666;
+      padding: 5px;
+    }
+
+    .side-item {
+      display: flex;
+      align-items: center;
+      background: #222222;
+      border: 1px solid #999999;
+      margin-bottom: 4px;
+      cursor: pointer;
+    }
+    .side-item:hover {
+      background: #444444;
+    }
+
+    .side-item.current {
+      background: #555555;
+      border-color: #ffcc00;
+    }
+    
+    .side-item.current .side-icon {
+      background: #ffcc00;
+      color: #000000;
+    }
+
+    .side-icon {
+      width: 32px;
+      height: 32px;
+      border-right: 1px solid #000000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #000000; /* fallback border/background */
+      overflow: hidden;
+    }
+
+    .side-icon img {
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+    }
+
+    .side-text {
+      padding: 3px 6px;
+      font-size: 10px;
+    }
+
+    .side-text-title {
+      font-weight: bold;
+      color: #ffcc00;
+    }
+
+    .side-text-sub {
+      font-size: 9px;
+      color: white;
+    }
+
+    .side-section-label {
+      margin: 6px 0 2px;
+      font-size: 9px;
+      text-transform: uppercase;
+      color: #ffcc00;
+      border-top: 1px solid #444444;
+      padding-top: 3px;
+    }
+
+
+
+    /* ===== GENERIC CONTENT SECTIONS ===== */
+    .content-section {
+      background: #111111;
+      border: 2px solid #666666;
+      margin-bottom: 10px;
+    }
+
+    .content-header {
+      background: #333333;
+      padding: 4px 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #000000;
+    }
+
+    .content-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #ffcc00;
+    }
+
+    .content-date {
+      font-size: 10px;
+      color: #bbbbbb;
+    }
+
+    .content-body {
+      padding: 8px 8px 10px;
+      font-size: 11px;
+      line-height: 1.4;
+    }
+
+    .content-body h3 {
+      margin: 0 0 6px;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    .content-body ul {
+      margin: 0 0 0 18px;
+      padding: 0;
+    }
+
+    .content-body li {
+      margin-bottom: 4px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 5px;
+      font-size: 10px;
+      text-transform: uppercase;
+      background: #333333;
+      border: 1px solid #999999;
+      margin-right: 4px;
+      margin-bottom: 2px;
+    }
+
+    .post-nav {
+      margin-top: 12px;
+      padding-top: 8px;
+      border-top: 1px solid #444444;
+      font-size: 10px;
+    }
+
+    .post-nav a {
+      color: #ffcc00;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+
+    /* ===== FOOTER ===== */
+    footer {
+      margin-top: 15px;
+      font-size: 10px;
+      text-align: center;
+      color: #777777;
+    }
+
+    footer a {
+      color: #ffcc00;
+    }
+
+    /* ===== BLOG-SPECIFIC LAYOUT ===== */
+    .blog-main-row .blog-posts {
+      flex: 2;
+    }
+
+    .blog-meta {
+      margin-top: 6px;
+      font-size: 10px;
+      color: #bbbbbb;
+    }
+
+    .blog-meta a {
+      color: #ffcc00;
+    }
+
+    .blog-intro {
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div id="page-wrapper">
+
+    <!-- HEADER / LOGO -->
+    <header>
+      <div class="logo-bar">
+        <div class="logo-box">CLOUDTOPHER</div>
+        <div class="logo-subtitle">
+          The problems of today, in the future!
+        </div>
+      </div>
+
+      <!-- same tabs, but Blog is active on this page -->
+      <div class="tab-bar">
+        <div class="tab" onclick="window.location.href='/index.html'">News</div>
+        <div class="tab" onclick="window.location.href='/index.html#skills'">Skills</div>
+        <div class="tab" onclick="window.location.href='/index.html#certs'">Certs</div>
+        <div class="tab" onclick="window.location.href='/blog.html'">Blog</div>
+        <div class="tab" onclick="window.location.href='/index.html#employment'">Employment</div>
+        <div class="tab" onclick="window.location.href='/index.html#contact'">Contact</div>
+      </div>
+    </header>
+
+    <!-- BLOG INTRO PANEL -->
+    <section class="content-section blog-intro">
+      <div class="content-header">
+        <div class="content-title">Cloud Resume Dev Log</div>
+        <div class="content-date">Latest update: Dec 2025</div>
+      </div>
+      <div class="content-body">
+        <p>
+          This blog documents how I built and continue to evolve my retro-inspired AWS
+          Cloud Resume. Each post walks through a specific part of the stack – from S3
+          hosting and CloudFront, to the visitor counter API and CI/CD pipeline.
+        </p>
+      </div>
+    </section>
+
+    <!-- MAIN BLOG LAYOUT -->
+  <div class="main-row blog-main-row">
+  <!-- LEFT: single post -->
+  <section class="blog-posts" aria-label="Blog posts">
+    <section class="content-section">
+      <div class="content-header">
+        <div class="content-title">Look! Another Post!</div>
+        <div class="content-date">Dec 11, 2025</div>
+      </div>
+      <div class="content-body">
+        <p>
+  I can't really even believe it myself, but here we are with another riveting blog post.
+  I'm so excited to share more random thoughts with you all.
+  The only problem is, I have no interesting thoughts to even share.
+  My mind is just a vast abyss of nothing really going on a lot of the time.
+  But hey, what are you gonna do?
+</p>
+
+        <p class="blog-meta">
+          Posted by Chris
+          &bull; Tags: <a href="/blog/tag/retro.html">Retro</a>, <a href="/blog/tag/design.html">Design</a>, <a href="/blog/tag/family.html">Family</a>, <a href="/blog/tag/hooray.html">Hooray</a> 
+          &bull; <a href="/blog.html">← Back to Blog</a>
+        </p>
+
+        <div class="post-nav">
+          <a href="/blog/sisters-birthday.html">&laquo; Previous Post: Sister's Birthday</a>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- RIGHT: sidebar -->
+  <aside class="sidebar" aria-label="Blog sidebar">
+    <div class="side-section-label">Recent Posts</div>
+    
+        <a href="/blog/look-another-post.html">
+          <div class="side-item current">
+            <div class="side-icon">01</div>
+            <div class="side-text">
+              <div class="side-text-title">Look! Another Post!</div>
+              <div class="side-text-sub">Dec 11, 2025</div>
+            </div>
+          </div>
+        </a>
+        
+
+        <a href="/blog/sisters-birthday.html">
+          <div class="side-item">
+            <div class="side-icon">02</div>
+            <div class="side-text">
+              <div class="side-text-title">Sister's Birthday</div>
+              <div class="side-text-sub">Dec 10, 2025</div>
+            </div>
+          </div>
+        </a>
+        
+
+        <a href="/blog/first-test-blog-post.html">
+          <div class="side-item">
+            <div class="side-icon">03</div>
+            <div class="side-text">
+              <div class="side-text-title">First Test Blog Post</div>
+              <div class="side-text-sub">Dec 09, 2025</div>
+            </div>
+          </div>
+        </a>
+        
+
+    <div class="side-section-label">Archives</div>
+    
+        <a href="/blog/archive/archive-2025-12.html">
+          <div class="side-item">
+            <div class="side-icon">25</div>
+            <div class="side-text">
+              <div class="side-text-title">December 2025</div>
+              <div class="side-text-sub">3 post(s)</div>
+            </div>
+          </div>
+        </a>
+        
+
+    <div class="side-section-label">Links</div>
+
+        <a href="https://github.com/tophanator" target="_blank">
+          <div class="side-item">
+            <div class="side-icon">
+              <img src="/img/github-logo-white.png" alt="GitHub Logo">
+            </div>
+            <div class="side-text">
+              <div class="side-text-title">Github</div>
+              <!-- <div class="side-text-sub">View original CRC</div> -->
+            </div>
+          </div>
+        </a>
+
+        <a href="https://linkedin.com/in/chris-roethel" target="_blank">
+          <div class="side-item">
+            <div class="side-icon">
+              <img src="/img/linkedin-logo-white.png" alt="LinkedIn Logo">
+            </div>
+            <div class="side-text">
+              <div class="side-text-title">LinkedIn</div>
+              <!-- <div class="side-text-sub">View original CRC</div> -->
+            </div>
+          </div>
+        </a>
+
+        <a href="https://www.youtube.com/@tophunator" target="_blank">
+          <div class="side-item">
+            <div class="side-icon">
+              <img src="/img/youtube-logo-white.png" alt="YouTube Logo">
+            </div>
+            <div class="side-text">
+              <div class="side-text-title">YouTube</div>
+              <!-- <div class="side-text-sub">View original CRC</div> -->
+            </div>
+          </div>
+        </a>
+
+              <a href="https://cloudresumechallenge.dev/docs/the-challenge/aws/" target="_blank">
+        <div class="side-item">
+          <div class="side-icon">CR</div>
+          <div class="side-text">
+            <div class="side-text-title">Cloud Resume Challenge</div>
+            <div class="side-text-sub">Official docs</div>
+          </div>
+        </div>
+      </a>
+
+      
+  </aside>
+</div>
+
+    <!-- FOOTER -->
+    <footer>
+      &copy; 2025 Chris Roethel –
+      Best viewed at 1024×768 in Netscape Navigator (just kidding).
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <rss version="2.0">
+      <channel>
+        <title>Cloud Resume Dev Log</title>
+        <link>https://cloudtopher.com/blog.html</link>
+        <description>Updates and notes from building my AWS Cloud Resume.</description>
+        <lastBuildDate>Thu, 11 Dec 2025 00:00:00 +0000</lastBuildDate>
+        
+        <item>
+          <title>Look! Another Post!</title>
+          <link>https://cloudtopher.com/blog/look-another-post.html</link>
+          <guid>https://cloudtopher.com/blog/look-another-post.html</guid>
+          <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
+          <description><![CDATA[<p>   I can't really even believe it myself, but here we are with another riveting blog post.   I'm so excited to share more random thoughts with you all.   The only problem is, I have no interesting thoughts to even share.   My mind is just a vast abyss of nothing really going on a lot of the time.   But hey, what are you gonna do? </p>]]></description>
+        </item>
+        
+        <item>
+          <title>Sister's Birthday</title>
+          <link>https://cloudtopher.com/blog/sisters-birthday.html</link>
+          <guid>https://cloudtopher.com/blog/sisters-birthday.html</guid>
+          <pubDate>Wed, 10 Dec 2025 00:00:00 +0000</pubDate>
+          <description><![CDATA[<p>   Today is my sister's birthday! Here is another test blog post that should    automatically show up on my site once I run this python script again.    Thanks for being here. </p>]]></description>
+        </item>
+        
+        <item>
+          <title>First Test Blog Post</title>
+          <link>https://cloudtopher.com/blog/first-test-blog-post.html</link>
+          <guid>https://cloudtopher.com/blog/first-test-blog-post.html</guid>
+          <pubDate>Tue, 09 Dec 2025 00:00:00 +0000</pubDate>
+          <description><![CDATA[<p>   I grew up on Newgrounds, Winamp skins, and Flash games, so when I started   the Cloud Resume Challenge I knew I didn’t want another minimalist template.   Instead, I rebuilt a late-90s portal UI using nothing but HTML and CSS. </p> <p>   The site is a fixed-width, 760px layout with chunky borders, tiny Verdana   text, and high-contrast button panels. Under the hood, though, it’s a static   S3 site fronted by CloudFront with HTTPS, caching, and versioned assets. </p>]]></description>
+        </item>
+        
+      </channel>
+    </rss>
