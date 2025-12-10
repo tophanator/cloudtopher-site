@@ -56,6 +56,11 @@
       text-decoration: none;
       color: inherit; /* keeps same color as the h1 */
     }
+  
+    .logo a:hover {
+      text-decoration: none; /* prevents underline */
+      color: inherit;        /* prevents color change if theme changes link colors */
+    }
 
     .logo-subtitle {
       font-size: 10px;
@@ -335,7 +340,7 @@
       </div>
 
     <div class="tab-bar">
-      <div class="tab" onclick="window.location.href='/'">Home</div>
+      <div class="tab active">Home</div>
       <div class="tab" onclick="window.location.href='/index.html#skills'">Skills</div>
       <div class="tab" onclick="window.location.href='/index.html#certs'">Certs</div>
       <div class="tab" onclick="window.location.href='/blog.html'">Blog</div>
