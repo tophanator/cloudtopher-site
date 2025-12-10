@@ -6,25 +6,9 @@ on:
   workflow_dispatch: {}  # lets you trigger manually from the Actions tab too
 
 jobs:
-  debug-sub:
-    runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-      contents: read
-
-    steps:
-      - name: Get and print OIDC sub claim
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const idToken = await core.getIDToken('sts.amazonaws.com');
-            const parts = idToken.split('.');
-            const payload = JSON.parse(Buffer.from(parts[1], 'base64').toString('utf8'));
-            console.log('OIDC sub =', payload.sub);
 
   deploy:
     runs-on: ubuntu-latest
-    needs: debug-sub
     permissions:
       id-token: write
       contents: read
@@ -36,8 +20,8 @@ jobs:
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::134705967758:role/github-actions-cloudtopher-deploy
-          aws-region: us-east-1
+          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
 
       - name: Sync files to S3
         run: |
