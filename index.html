@@ -380,7 +380,6 @@
             <div class="hero-meta">
               <div>
                 <span class="label">Visitor Counter:</span>
-                <!-- You’ll fill this with JS from your API -->
                 <span id="visitor-count">0000</span>
               </div>
               <div>
@@ -403,11 +402,13 @@
 
       <!-- SIDEBAR -->
       <aside class="sidebar" aria-label="Quick links">
-        <div class="side-section-label">Cloud Ops</div>
+        <div class="side-section-label">Quick Links</div>
 
         <a href="#skills">
           <div class="side-item">
-            <div class="side-icon">SK</div>
+            <div class="side-icon">
+              <img src="/img/skills.png" alt="Skills Logo">  
+            </div>
             <div class="side-text">
               <div class="side-text-title">Skills Matrix</div>
               <div class="side-text-sub">AWS • IaC • CI/CD</div>
@@ -417,7 +418,9 @@
 
         <a href="#certs">
           <div class="side-item">
-            <div class="side-icon">AW</div>
+            <div class="side-icon">
+              <img src="/img/aws-cert.png" alt="Certs Logo">
+            </div>
             <div class="side-text">
               <div class="side-text-title">Certifications</div>
               <div class="side-text-sub">AWS &amp; more</div>
@@ -427,7 +430,9 @@
 
         <a href="#blog">
           <div class="side-item">
-            <div class="side-icon">BL</div>
+            <div class="side-icon">
+              <img src="/img/blog.png" alt="Blog Logo">
+            </div>
             <div class="side-text">
               <div class="side-text-title">CRC Blog</div>
               <div class="side-text-sub">Build log + lessons</div>
@@ -437,7 +442,9 @@
 
         <a href="#employment">
           <div class="side-item">
-            <div class="side-icon">XP</div>
+            <div class="side-icon">
+              <img src="/img/1up.png" alt="XP Logo">
+            </div>
             <div class="side-text">
               <div class="side-text-title">Experience</div>
               <div class="side-text-sub">Work history</div>
@@ -493,12 +500,16 @@
         <div class="content-date">Dec 9, 2025</div>
       </div>
       <div class="content-body">
-        <h3>Build Log &amp; Blog Posts</h3>
+        <h3>Welcome to my Resume Site</h3>
         <p>
-          As part of the Cloud Resume Challenge, I documented the full build of this site –
-          from S3 hosting to DynamoDB visitor counter and CI/CD.
+          Thank you for being here. On this site you can find my skills, certifications, and work experience.
+          Be sure to check out my blog for deeper dives into my projects and cloud computing/DevOps topics.
         </p>
-        <ul>
+        <p>
+          As part of the Cloud Resume Challenge, I documented the full build of this site.
+          From S3 hosting to the DynamoDB visitor counter and CI/CD, I cover it all in my blog posts.
+        </p>
+        <!-- <ul>
           <li>
             <strong>Post 1 – Designing a Retro Newgrounds-Themed Cloud Resume</strong><br>
             How I recreated a late 90s aesthetic while deploying on modern AWS services.
@@ -514,7 +525,7 @@
             Using SAM/Terraform and GitHub Actions to ship changes safely.
             <a href="https://yourblog.example.com/post-3" target="_blank">Read &raquo;</a>
           </li>
-        </ul>
+        </ul> -->
       </div>
     </section>
 
@@ -522,12 +533,12 @@
     <section id="skills" class="content-section">
       <div class="content-header">
         <div class="content-title">Relevant Skills</div>
-        <div class="content-date">Cloud / DevOps / Web</div>
+        <div class="content-date"></div>
       </div>
       <div class="content-body">
         <h3>Core Cloud Skills</h3>
         <p>
-          Hands-on experience implementing the full CRC stack: static hosting, serverless APIs,
+          Hands-on experience implementing applications using AWS services: static hosting, serverless APIs,
           databases, IaC, and CI/CD.
         </p>
         <p>
@@ -544,6 +555,7 @@
         <p>
           <span class="badge">HTML / CSS / JS</span>
           <span class="badge">Python</span>
+          <span class="badge">Java</span>
           <span class="badge">Git / GitHub</span>
           <span class="badge">IaC (SAM / Terraform)</span>
           <span class="badge">CI/CD Pipelines</span>
@@ -553,8 +565,11 @@
         <h3>Soft Skills</h3>
         <ul>
           <li>Clear written documentation of complex systems</li>
-          <li>Explaining architecture to non-technical stakeholders</li>
           <li>Continuous learning and self-directed study</li>
+          <li>Problem-solving and troubleshooting</li>
+          <li>Collaboration</li>
+          <li>Attention to detail</li>
+          <li>Adaptability</li>
           <li>Super cool guy that's easy to get along with</li>
         </ul>
       </div>
@@ -564,7 +579,7 @@
     <section id="certs" class="content-section">
       <div class="content-header">
         <div class="content-title">Certifications</div>
-        <div class="content-date">Required by CRC</div>
+        <div class="content-date"></div>
       </div>
       <div class="content-body">
         <h3>AWS Certifications</h3>
@@ -596,25 +611,34 @@
         <div class="content-date">Most Recent First</div>
       </div>
       <div class="content-body">
-        <h3>Professional Experience</h3>
+        <h3>Previous Experience</h3>
         <ul>
           <li>
             <strong>Bartender – Otto's Taproom & Grille</strong> (2024 – Present)<br>
             Philadelphia, PA<br>
-            • Bullet about relevant technical skills<br>
-            • Bullet about customer support / troubleshooting / on-call
+            • Deliver friendly, attentive service that encourages repeat customers and fosters a strong community.<br>
+            • Solve technical and service issues calmly during high-volume shifts to ensure smooth operations.<br>
+            • Provide prompt and clear communication in a fast-paced, customer-facing environment.<br>
+            • Maintain organized, clean workstations aligned with operational protocols and health codes.<br>
+            • Demonstrate reliability and teamwork in a high-pressure setting with a focus on patron experience.
           </li>
           <li>
             <strong>Technical Support Specialist – Nucleus Healthcare</strong> (2021)<br>
             Radnor, PA (Remote)<br>
-            • Bullet about cloud / automation / systems you worked on<br>
-            • Bullet about collaboration / documentation / ownership
+            • Resolved 200–300 customer support tickets weekly, leading the team in volume and resolution accuracy.<br>
+            • Provided Tier 1 technical support for a cloud-based test scheduling platform via email and phone.<br>
+            • Guided users through platform access, mobile troubleshooting, and account configuration.<br>
+            • Collaborated with developers and designers to identify and document platform bugs.<br>
+            • Used Slack and Teams to communicate across support and engineering teams.
           </li>
           <li>
             <strong>Audio Engineer – Occupy Studio</strong> (2019 – 2023)<br>
             Newark, DE<br>
-            • Bullet about relevant technical skills<br>
-            • Bullet about customer support / troubleshooting / on-call
+            • Worked directly with 8–20 clients weekly, managing schedules and consistently delivering high-quality results.
+            • Handled hardware/software issues, signal routing, and user experience challenges.
+            • Designed optimized audio setups and workflows for consistent, high-quality results.
+            • Maintained studio equipment and integrity of session files.
+            • Engineered audio projects with millions of streams on major platforms.
           </li>
         </ul>
       </div>
@@ -623,7 +647,7 @@
     <!-- CONTACT SECTION -->
     <section id="contact" class="content-section">
       <div class="content-header">
-        <div class="content-title">Contact &amp; Next Steps</div>
+        <div class="content-title">Contact</div>
         <div class="content-date"></div>
       </div>
       <div class="content-body">
