@@ -63,7 +63,7 @@
     .logo-box a:active {
       text-decoration: none;
     }
-
+    
     .logo-subtitle {
       font-size: 10px;
       text-transform: uppercase;
@@ -124,6 +124,7 @@
       margin-bottom: 4px;
       cursor: pointer;
     }
+
     .side-item:hover {
       background: #444444;
     }
@@ -178,7 +179,6 @@
       border-top: 1px solid #444444;
       padding-top: 3px;
     }
-
 
 
     /* ===== GENERIC CONTENT SECTIONS ===== */
@@ -241,20 +241,6 @@
       margin-bottom: 2px;
     }
 
-    .post-nav {
-      margin-top: 12px;
-      padding-top: 8px;
-      border-top: 1px solid #444444;
-      font-size: 10px;
-    }
-
-    .post-nav a {
-      color: #ffcc00;
-      text-transform: uppercase;
-      font-weight: bold;
-    }
-
-
     /* ===== FOOTER ===== */
     footer {
       margin-top: 15px;
@@ -285,6 +271,23 @@
     .blog-intro {
       margin-bottom: 12px;
     }
+
+    .read-more-btn {
+      display: inline-block;
+      margin-left: 6px;
+      padding: 1px 6px;
+      font-size: 10px;
+      text-transform: uppercase;
+      background: #333333;
+      border: 1px solid #999999;
+    }
+
+    .read-more-btn:hover {
+      background: #ffcc00;
+      color: #000000;
+      text-decoration: none;
+    }
+
   </style>
 </head>
 <body>
@@ -315,64 +318,41 @@
     <!-- BLOG INTRO PANEL -->
     <section class="content-section blog-intro">
       <div class="content-header">
-        <div class="content-title">Cloud Resume Dev Log</div>
-        <div class="content-date">Latest update: Dec 2025</div>
+        <div class="content-title">Tag: Resume Challenge</div>
+        <div class="content-date">1 post(s)</div>
       </div>
       <div class="content-body">
-        <p>
-          This blog documents how I built and continue to evolve my retro-inspired AWS
-          Cloud Resume. Each post walks through a specific part of the stack – from S3
-          hosting and CloudFront, to the visitor counter API and CI/CD pipeline.
-        </p>
+        <p>Posts tagged with “Resume Challenge”.</p>
       </div>
     </section>
 
     <!-- MAIN BLOG LAYOUT -->
-  <div class="main-row blog-main-row">
-  <!-- LEFT: single post -->
-  <section class="blog-posts" aria-label="Blog posts">
-    <section class="content-section">
+    <div class="main-row blog-main-row">
+      <!-- LEFT: POSTS -->
+      <section class="blog-posts" aria-label="Blog posts">
+        
+    <article id="post-site-build" class="content-section">
       <div class="content-header">
-        <div class="content-title">Intro - Welcome to My Blog!</div>
-        <div class="content-date">Dec 12, 2025</div>
+        <div class="content-title">Resume Challenge Part 1 - Building the Static Site with HTML and CSS</div>
+        <div class="content-date">Dec 13, 2025</div>
       </div>
       <div class="content-body">
-        <p>
-  Hello and welcome to the very first Cloudtopher.com blog post! I first created this site as a way to 
-  host my resume online. I created it as part of the Cloud Resume Challenge (link here for more info). 
-  The last step of the challenge is to create a blog post documenting what you learned throughout the 
-  process of the challenge, so I decided to add an extra step and build my own blog on this site 
-  instead of hosting it somewhere like Medium or Hashnode.
-</p>
-<p>
-  The following posts will be mainly related to the steps of the Cloud Resume Challenge. 
-  I want to talk a little bit about how I completed them and what I learned through each process. 
-  After that, I will be diving into some other DevOps topics as I continue to build more projects, 
-  along with whatever other things I feel compelled to share here. Several of the blog posts will 
-  also have accompanying videos, which I will link in each post. You can also find a link to my 
-  YouTube channel on the sidebar here or on my home page.
-</p>
-<p>
-  Thanks for being here, and I hope you can find some useful information, or just enjoy reading.
-</p>
+        <p>Mark Twain once wrote, "the secret of getting ahead is getting started." Lao Tzu also wrote, "A journey of a thousand miles begins with a single step." I could go on with other motivational quotes I found from my Google search, but maybe we should take this wisdom to heart and dive right into the first part of completing my Cloud Resume Challenge. The first task of the challenge is technically to acquire the AWS Cloud Practitioner certification, but we're...</p>
 
         <p class="blog-meta">
           Posted by Chris
-          &bull; Tags: <a href="/blog/tag/random.html">Random</a>, <a href="/blog/tag/aws.html">AWS</a>, <a href="/blog/tag/html.html">HTML</a> 
-          &bull; <a href="/blog.html">← Back to Blog</a>
+          &bull; Tags: <a href="/blog/tag/aws.html">AWS</a>, <a href="/blog/tag/html.html">HTML</a>, <a href="/blog/tag/css.html">CSS</a>, <a href="/blog/tag/resume-challenge.html">Resume Challenge</a>
+          &bull; <a class="read-more-btn" href="/blog/site-build.html">Read More &raquo;</a>
         </p>
-
-        <div class="post-nav">
-          <a href="/blog/site-build.html">Next Post: Resume Challenge Part 1 - Building the Static Site with HTML and CSS &raquo;</a>
-        </div>
       </div>
-    </section>
-  </section>
-
-  <!-- RIGHT: sidebar -->
-  <aside class="sidebar" aria-label="Blog sidebar">
-    <div class="side-section-label">Recent Posts</div>
+    </article>
     
+      </section>
+
+      <!-- RIGHT: BLOG SIDEBAR -->
+      <aside class="sidebar" aria-label="Blog sidebar">
+        <div class="side-section-label">Recent Posts</div>
+        
         <a href="/blog/site-build.html">
           <div class="side-item">
             <div class="side-icon">01</div>
@@ -385,7 +365,7 @@
         
 
         <a href="/blog/welcome.html">
-          <div class="side-item current">
+          <div class="side-item">
             <div class="side-icon">02</div>
             <div class="side-text">
               <div class="side-text-title">Intro - Welcome to My Blog!</div>
@@ -394,9 +374,8 @@
           </div>
         </a>
         
-
-    <div class="side-section-label">Archives</div>
-    
+        <div class="side-section-label">Archives</div>
+        
         <a href="/blog/archive/archive-2025-12.html">
           <div class="side-item">
             <div class="side-icon">25</div>
@@ -407,8 +386,8 @@
           </div>
         </a>
         
-
-    <div class="side-section-label">Links</div>
+         
+        <div class="side-section-label">Links</div>
 
         <a href="https://github.com/tophanator" target="_blank">
           <div class="side-item">
@@ -446,19 +425,19 @@
           </div>
         </a>
 
-              <a href="https://cloudresumechallenge.dev/docs/the-challenge/aws/" target="_blank">
-        <div class="side-item">
-          <div class="side-icon">CR</div>
-          <div class="side-text">
-            <div class="side-text-title">Cloud Resume Challenge</div>
-            <div class="side-text-sub">Official docs</div>
+                <a href="https://cloudresumechallenge.dev/docs/the-challenge/aws/" target="_blank">
+          <div class="side-item">
+            <div class="side-icon">CR</div>
+            <div class="side-text">
+              <div class="side-text-title">Cloud Resume Challenge</div>
+              <div class="side-text-sub">Official docs</div>
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
+        
 
-      
-  </aside>
-</div>
+      </aside>
+    </div>
 
     <!-- FOOTER -->
     <footer>
