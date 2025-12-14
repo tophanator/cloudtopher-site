@@ -4,38 +4,14 @@
         <title>Cloud Resume Dev Log</title>
         <link>https://cloudtopher.com/blog.html</link>
         <description>Updates and notes from building my AWS Cloud Resume.</description>
-        <lastBuildDate>Thu, 11 Dec 2025 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Fri, 12 Dec 2025 00:00:00 +0000</lastBuildDate>
         
         <item>
-          <title>Look! Another Post!</title>
-          <link>https://cloudtopher.com/blog/look-another-post.html</link>
-          <guid>https://cloudtopher.com/blog/look-another-post.html</guid>
-          <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
-          <description><![CDATA[<p>   I can't really even believe it myself, but here we are with another riveting blog post.   I'm so excited to share more random thoughts with you all.   The only problem is, I have no interesting thoughts to even share.   My mind is just a vast abyss of nothing really going on a lot of the time.   But hey, what are you gonna do? </p>]]></description>
-        </item>
-        
-        <item>
-          <title>CI/CD Integration with GitHub Actions</title>
-          <link>https://cloudtopher.com/blog/ci-cd-integration.html</link>
-          <guid>https://cloudtopher.com/blog/ci-cd-integration.html</guid>
-          <pubDate>Wed, 10 Dec 2025 00:00:00 +0000</pubDate>
-          <description><![CDATA[<p>   So here we are, at the point where I have successfully set up my CI/CD pipeline (mostly) for the resume site.   I don't have much else to say about it at the moment, since it's very late and I think I'm done for the night.   But this post is to celebrate. And to give me an excuse to have another change to push to the repo. Peace out. </p>]]></description>
-        </item>
-        
-        <item>
-          <title>Sister's Birthday</title>
-          <link>https://cloudtopher.com/blog/sisters-birthday.html</link>
-          <guid>https://cloudtopher.com/blog/sisters-birthday.html</guid>
-          <pubDate>Wed, 10 Dec 2025 00:00:00 +0000</pubDate>
-          <description><![CDATA[<p>   Today is my sister's birthday! Here is another test blog post that should    automatically show up on my site once I run this python script again.    Thanks for being here. </p>]]></description>
-        </item>
-        
-        <item>
-          <title>First Test Blog Post</title>
-          <link>https://cloudtopher.com/blog/first-test-blog-post.html</link>
-          <guid>https://cloudtopher.com/blog/first-test-blog-post.html</guid>
-          <pubDate>Tue, 09 Dec 2025 00:00:00 +0000</pubDate>
-          <description><![CDATA[<p>   I grew up on Newgrounds, Winamp skins, and Flash games, so when I started   the Cloud Resume Challenge I knew I didn’t want another minimalist template.   Instead, I rebuilt a late-90s portal UI using nothing but HTML and CSS. </p> <p>   The site is a fixed-width, 760px layout with chunky borders, tiny Verdana   text, and high-contrast button panels. Under the hood, though, it’s a static   S3 site fronted by CloudFront with HTTPS, caching, and versioned assets. </p>]]></description>
+          <title>Intro - Welcome to My Blog!</title>
+          <link>https://cloudtopher.com/blog/welcome.html</link>
+          <guid>https://cloudtopher.com/blog/welcome.html</guid>
+          <pubDate>Fri, 12 Dec 2025 00:00:00 +0000</pubDate>
+          <description><![CDATA[<p>   Hello and welcome to the very first Cloudtopher.com blog post! I first created this site as a way to    host my resume online. I created it as part of the Cloud Resume Challenge (link here for more info).    The last step of the challenge is to create a blog post documenting what you learned throughout the    process of the challenge, so I decided to add an extra step and build my own blog on this site    instead of hosting it somewhere like Medium or Hashnode. </p> <p>   The following posts will be mainly related to the steps of the Cloud Resume Challenge.    I want to talk a little bit about how I completed them and what I learned through each process.    After that, I will be diving into some other DevOps topics as I continue to build more projects,    along with whatever other things I feel compelled to share here. Several of the blog posts will    also have accompanying videos, which I will link in each post. You can also find a link to my    YouTube channel on the sidebar here or on my home page. </p> <p>   Thanks for being here, and I hope you can find some useful information, or just enjoy reading. </p>]]></description>
         </item>
         
       </channel>
