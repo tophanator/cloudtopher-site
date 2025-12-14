@@ -128,7 +128,6 @@ def render_recent_posts(posts, limit=5, current_slug=None):
         items.append(f"""
         <a href="{permalink}">
           <div class="side-item{current_class}">
-            <div class="side-icon">{i:02d}</div>
             <div class="side-text">
               <div class="side-text-title">{post['title']}</div>
               <div class="side-text-sub">{post['date'].strftime('%b %d, %Y')}</div>
@@ -155,7 +154,6 @@ def render_archives(posts):
         items.append(f"""
         <a href="{permalink}">
           <div class="side-item">
-            <div class="side-icon">{str(year)[-2:]}</div>
             <div class="side-text">
               <div class="side-text-title">{month_name} {year}</div>
               <div class="side-text-sub">{len(groups[(year, month)])} post(s)</div>
